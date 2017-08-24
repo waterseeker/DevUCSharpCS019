@@ -16,7 +16,8 @@ namespace DevUCSharpCS_ASP_019
 
         protected void submitButton_Click(object sender, EventArgs e)
         {
-            string result = "Thank you, " + nameTextBox.Text + ", for your business!";
+            string result = string.Format("Thank you, {0}, for your business. Your Social Security Number is: {1}",
+                nameTextBox.Text, socialSecurityTextBox.Text);
             resultLabel.Text = result;
         }
     }
