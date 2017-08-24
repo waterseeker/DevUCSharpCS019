@@ -17,7 +17,8 @@ namespace DevUCSharpCS_ASP_019
         protected void submitButton_Click(object sender, EventArgs e)
         {
             int socialSecurityNumber = int.Parse(socialSecurityTextBox.Text);
-            string result = string.Format("Thank you, {0}, for your business. Your Social Security Number is: {1:000-00-0000}",
+            string result = string.Format("Thank you, {0}, for your business. <br />Your Social Security Number is: {1:000-00-0000}. " +
+                "Why we would ever want to display this is beyond me but it's good practice for formatting a return string.",
                 nameTextBox.Text, socialSecurityNumber);
             resultLabel.Text = result;
         }
